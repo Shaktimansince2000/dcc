@@ -1,6 +1,14 @@
 eureka:
   instance:
-    hostname: service-discovery
+    prefer-ip-address: false
+    instanceId: ${spring.application.name}:${spring.cloud.client.hostname}
+    hostname: ${spring.cloud.client.hostname}
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    # Set connection timeouts
+    initialInstanceInfoReplicationIntervalSeconds: 10  # Retry interval
+    instanceInfoReplicationIntervalSeconds: 10
   client:
     service-url:
       defaultZone: http://service-discovery:8761/eureka/
