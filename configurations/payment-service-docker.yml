@@ -2,7 +2,7 @@ server:
   port: 8060
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3307/mydatabase
+    url: jdbc:mysql://${DB_HOST:localhost:3307}/mydatabase
     username: root
     password: rootpassword
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -16,10 +16,10 @@ spring:
 
   kafka:
     producer:
-      bootstrap-servers: localhost:9092
+      bootstrap-servers: kafka:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       properties:
         spring.json.type.mapping: paymentConfirmation:com.dev.paymentservice.dto.PaymentNotificationRequest
   config:
-    product-url: http://localhost:8222/api/v1/products
+    product-url: http://gateway-service:8222/api/v1/products
