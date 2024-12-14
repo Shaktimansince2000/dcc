@@ -1,0 +1,18 @@
+eureka:
+  instance:
+    hostname: service-discovery
+  client:
+    service-url:
+      defaultZone: http://service-discovery:8761/eureka/
+
+name:
+  value: admin
+spring:
+  cloud:
+    config:
+      override-system-properties: false
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
