@@ -9,7 +9,6 @@ eureka:
     # Set connection timeouts
     initialInstanceInfoReplicationIntervalSeconds: 10  # Retry interval
     instanceInfoReplicationIntervalSeconds: 10
-  client:
     service-url:
       defaultZone: http://service-discovery:8761/eureka/
 
