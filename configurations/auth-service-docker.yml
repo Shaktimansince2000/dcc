@@ -1,0 +1,6 @@
+server:
+  port: 8070
+
+application:
+  config:
+    user-url: http://gateway-service:8222/api/v1/users
