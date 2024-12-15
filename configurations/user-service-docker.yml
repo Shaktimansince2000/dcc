@@ -3,4 +3,4 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://admin:admin@${DB_HOST:localhost:27018}/customer-service?authSource=admin&authMechanism=SCRAM-SHA-256
+      uri: mongodb://admin:admin@${DB_HOST:localhost:27018}/user-service?authSource=admin&authMechanism=SCRAM-SHA-256
