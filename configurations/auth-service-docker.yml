@@ -3,4 +3,4 @@ server:
 
 application:
   config:
-    user-url: http://gateway-service:8222/api/v1/users
+    user-url: http://user-service:8090/api/v1/users
