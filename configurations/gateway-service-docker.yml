@@ -10,39 +10,39 @@ spring:
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
-            - Path=/api/v1/users/**
+            - Path=/ecom/users/**
           filters:
            - AuthenticationFilter
 
         - id: auth-service
           uri: lb://AUTH-SERVICE
           predicates:
-            - Path=/api/v1/auth/**
+            - Path=/ecom/auth/**
           
         - id: order-service
           uri: lb:http://ORDER-SERVICE
           predicates:
-            - Path=/api/v1/orders/**
+            - Path=/ecom/orders/**
           filters:
            - AuthenticationFilter
 
         - id: order-lines-service
           uri: lb:http://ORDER-SERVICE
           predicates:
-            - Path=/api/v1/order-lines/**
+            - Path=/ecom/order-lines/**
           filters:
            - AuthenticationFilter
 
         - id: product-service
           uri: lb:http://PRODUCT-SERVICE
           predicates:
-            - Path=/api/v1/products/**
+            - Path=/ecom/products/**
           filters:
            - AuthenticationFilter
 
         - id: payment-service
           uri: lb:http://PAYMENT-SERVICE
           predicates:
-            - Path=/api/v1/payments/**
+            - Path=/ecom/payments/**
           filters:
            - AuthenticationFilter

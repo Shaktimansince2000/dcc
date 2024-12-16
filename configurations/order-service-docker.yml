@@ -23,6 +23,6 @@ spring:
 
 application:
   config:
-    user-url: http://user-service:8090/api/v1/users
-    payment-url: http://payment-service:8060/api/v1/payments
-    product-url: http://product-service:8050/api/v1/products
+    user-url: http://user-service:8090/ecom/users
+    payment-url: http://payment-service:8060/ecom/payments
+    product-url: http://product-service:8050/ecom/products

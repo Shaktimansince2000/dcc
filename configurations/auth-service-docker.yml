@@ -3,4 +3,4 @@ server:
 
 application:
   config:
-    user-url: http://user-service:8090/api/v1/users
+    user-url: http://user-service:8090/ecom/users
