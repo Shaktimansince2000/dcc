@@ -20,28 +20,28 @@ spring:
             - Path=/ecom/auth/**
           
         - id: order-service
-          uri: lb:http://ORDER-SERVICE
+          uri: lb://ORDER-SERVICE
           predicates:
             - Path=/ecom/orders/**
           filters:
            - AuthenticationFilter
 
         - id: order-lines-service
-          uri: lb:http://ORDER-SERVICE
+          uri: lb://ORDER-SERVICE
           predicates:
             - Path=/ecom/order-lines/**
           filters:
            - AuthenticationFilter
 
         - id: product-service
-          uri: lb:http://PRODUCT-SERVICE
+          uri: lb://PRODUCT-SERVICE
           predicates:
             - Path=/ecom/products/**
           filters:
            - AuthenticationFilter
 
         - id: payment-service
-          uri: lb:http://PAYMENT-SERVICE
+          uri: lb://PAYMENT-SERVICE
           predicates:
             - Path=/ecom/payments/**
           filters:
