@@ -13,7 +13,7 @@ spring:
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
         spring.json.trusted.packages: '*'
-        spring.json.type.mapping: SellerProductList:com.dev.notificationservice.dto.SellerProductList,orderConfirmation:com.dev.notificationservice.dto.OrderConfirmation,paymentConfirmation:com.dev.notificationservice.dto.PaymentConfirmation
+        spring.json.type.mapping: sellerProductList:com.dev.notificationservice.dto.SellerProductList,orderConfirmation:com.dev.notificationservice.dto.OrderConfirmation,paymentConfirmation:com.dev.notificationservice.dto.PaymentConfirmation
   
 
 
